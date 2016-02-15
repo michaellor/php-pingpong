@@ -8,40 +8,39 @@
         function test_pingPong_Pong()
         {
             //Arrange
-            $test_PingpongGenerator = new PingpongGenerator;
-            $input = "10";
+            // $test_PingpongGenerator = new PingpongGenerator;
+            $input = 3;
 
             //Act
-            $result = $test_PingpongGenerator->makePingPong($input);
-
+            $result = makePingPong($input);
             //Assert
-            $this->assertEquals("Pong", $result);
+            $this->assertEquals(["Ping", "2", "1"], $result);
         }
 
         function test_pingPong_Ping()
         {
             //Arrange
-            $test_PingpongGenerator = new PingpongGenerator;
+            // $test_PingpongGenerator = new PingpongGenerator;
             $input = "6";
 
             //Act
-            $result = $test_PingpongGenerator->makePingPong($input);
+            $result = makePingPong($input);
 
             //Assert
-            $this->assertEquals("Ping", $result);
+            $this->assertEquals(["Ping", "Pong", "4", "Ping", "2", "1"], $result);
         }
 
         function test_pingPong_PingPong()
         {
             //Arrange
-            $test_PingpongGenerator = new PingpongGenerator;
-            $input = "15";
+            // $test_PingpongGenerator = new PingpongGenerator;
+            $input = "4";
 
             //Act
-            $result = $test_PingpongGenerator->makePingPong($input);
+            $result = makePingPong($input);
 
             //Assert
-            $this->assertEquals("PingPong", $result);
+            $this->assertEquals(["4", "Ping", "2", "1"], $result);
         }
 
     }
