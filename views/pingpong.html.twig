@@ -7,7 +7,9 @@
     <div class='container'>
         <h1>Ping Pong</h1>
         <ul>
-                <!-- {{ return.makePingPong }} -->
+            {% for return in returns %}
+                <li>{{ return }}</li>
+            {% endfor %}
         </ul>
     </div>
 </body>
