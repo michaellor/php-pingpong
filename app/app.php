@@ -13,9 +13,9 @@
     });
 
     $app->get("/view_title_case", function() use($app) {
-        $my_TitleCaseGenerator = new TitleCaseGenerator;
-        $title_cased_phrase = $my_TitleCaseGenerator->makeTitleCase($_GET['phrase']);
-        return $app['twig']->render('titlecase.html.twig', array('result' => $title_cased_phrase));
+        $my_PingpongGenerator = new PingpongGenerator;
+        $pingpong_number = $my_PingpongGenerator->makePingPong($_GET['phrase']);
+        return $app['twig']->render('pingpong.html.twig', array('result' => $pingpong_number));
     });
 
     return $app;
